@@ -1,0 +1,64 @@
+.Section04_List_UL {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Section04_List li {
+  /* padding: 1rem 1rem; */
+  margin: 0.5rem 0.5rem;
+  /* border: 1px solid #ddd; */
+  border-radius: 1rem;
+}
+
+.Section04_List .list {
+  line-height: 1.4;
+}
+
+.Section04_List .list b {
+  display: block;
+  width: 245px;
+  height: 245px;
+  margin-bottom: 10px;
+}
+
+.Section04_List .list img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  /* 여기를 추가 */
+}
+
+.Section04_List li:hover img {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.Section04_List h2 {
+  /* padding: 0.5rem 0; */
+  font-size: var(--middleSize);
+  font-weight: 600;
+}
+
+.Section04_List div {
+  display: flex;
+}
+
+.Section04_List div p {
+  /* padding: 0.3rem 0.7rem; */
+  border-radius: 0.3rem;
+  font-size: var(--baseSize);
+}
+
+.Section04_List div p:nth-of-type(1) {
+  background-color: red;
+  color: #fff;
+}
+
+.Section04_List .listSubTitle {
+  color: var(--fontColorSub01);
+}
+.Section04_List .listPrice {
+  color: var(--pointColor);
+}

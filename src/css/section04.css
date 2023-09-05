@@ -1,0 +1,244 @@
+.Section04 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.Section04 .left {
+  width: 38.46%;
+  /* border: 1px solid #ddd; */
+  text-align: center;
+  font-size: var(--subTitleSize);
+  font-family: "S-CoreDream-3Light";
+  font-weight: bold;
+  /* position: relative; */
+}
+
+/* IE */
+select::-ms-expand {
+  display: none;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  width: 100%;
+  padding-right: 25px;
+  padding-left: 1rem;
+  font-size: var(--subTitleSize);
+  font-family: "S-CoreDream-3Light";
+  color: #fff;
+  background-color: #3f3f3f;
+  border-radius: 10px;
+  /* 화살표 공간 확보 */
+}
+
+.select-wrapper::before {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  /* 위쪽 화살표 */
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select:focus + .select-wrapper::before {
+  border-top: none;
+  /* 위쪽 화살표 없애기 */
+  border-bottom: 8px solid black;
+  /* 아래쪽 화살표 생성 */
+}
+
+.Section04 .left .select option {
+  background: black;
+  color: #fff;
+  padding: 3px 0;
+  font-size: var(--baseSize);
+  border-radius: 10px;
+}
+
+.Section04 .left span {
+  display: block;
+  width: 350px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveRight 10s infinite;
+  z-index: -99;
+  /* infinite로 무한 반복 */
+}
+
+.Section04 .left img {
+  width: 100%;
+}
+
+.Section04 .left div {
+  display: flex;
+  justify-content: center;
+}
+
+.Section04 .left li {
+  /* padding: 0.3rem; */
+  cursor: pointer;
+}
+
+.Section04 .right {
+  width: 61.54%;
+  /* border: 1px solid #ddd; */
+}
+
+.Section04 .right_p {
+  display: flex;
+  justify-content: right;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.Section04 .right span {
+  padding: 0.8rem 1.5rem;
+  outline: none;
+  border: 1px solid var(--fontColorSub02);
+  background-color: white;
+  color: var(--fontColorSub01);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Section04 .right span:hover {
+  background-color: var(--pointColor);
+  color: white;
+  border-color: var(--pointColor);
+}
+
+@keyframes moveRight {
+  from {
+    left: 11%;
+  }
+
+  to {
+    left: 20%;
+    /* 원하는 최종 위치로 조정 가능합니다. */
+  }
+}
+
+@media (max-width: 1300px) {
+  .Section04 {
+    width: 100%;
+  }
+
+  .Section04 .left {
+    width: 38.46%;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    /* position: relative; */
+  }
+
+  .Section04 .left span {
+    bottom: 30%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    z-index: -99;
+    /* display: none; */
+  }
+
+  @keyframes moveRight {
+    from {
+      left: 60%;
+    }
+
+    to {
+      left: 70%;
+      /* 원하는 최종 위치로 조정 가능합니다. */
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .Section04 {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .Section04 .left {
+    width: 100%;
+  }
+
+  .Section04 .right {
+    width: 100%;
+  }
+
+  .Section04 .left span {
+    top: 75%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    z-index: -99;
+    /* display: none; */
+  }
+
+  @keyframes moveRight {
+    from {
+      left: 60%;
+    }
+
+    to {
+      left: 70%;
+      /* 원하는 최종 위치로 조정 가능합니다. */
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Section04_List_UL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* width: 100%; */
+  }
+
+  .Section04 .left span {
+    top: 86%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    z-index: -99;
+    /* display: none; */
+  }
+
+  @keyframes moveRight {
+    from {
+      left: 60%;
+    }
+
+    to {
+      left: 70%;
+      /* 원하는 최종 위치로 조정 가능합니다. */
+    }
+  }
+}
+
+/*  
+
+1920px
+1000px
+320px
+
+*/
